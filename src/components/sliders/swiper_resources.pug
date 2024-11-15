@@ -1,0 +1,21 @@
+section(class="swiper-resources py-12 bg-limeGreen rounded-[42px]")
+  .container.mx-auto
+    .title-resources.text-center.pb-3
+      h2 Recursos y guías para
+        span  vivir mejor
+    include ../tabs/tabs_borderless.pug
+  div(class="tab-content1 container mx-auto mt-5" id="Propietario")
+    .swiper-container.mySwiper1
+      .swiper-wrapper
+        each slide in [1, 2, 3]
+          .swiper-slide.flex.items-stretch
+            include ../cards/card_resource.pug
+    .grid.justify-items-center.mt-12.flex.flex-col.space-y-2
+      a(class="button-secondary py-3.5 px-6 rounded-full" href="#")
+        i.fa.fa-lightbulb-o.mr-2
+        | Ir al centro de recursos
+      a(class="button-secondary py-3.5 px-6 rounded-full" href="#")
+        i.fa.fa-user.mr-2
+        | Ingresar a Soy cliente
+    div(class="tab-content1" id="Inquilino")
+      h3 Inquilino

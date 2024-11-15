@@ -1,0 +1,22 @@
+// src/main.scss
+
+// Las reglas @use deben ir al principio
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+
+
+// Variables para agilizar el desarrollo
+@use './styles/_variables.scss' as *;
+
+// estilos de las secciones
+@use './components/banners/hero_banner.scss';
+@use './components/sliders/swiper_properties.scss';
+@use './components/sliders/swiper_resources.scss';
+@use './components/tabs/tabs_bordered.scss';
+@use './components/tabs/tabs_borderless.scss';
+@use './components/tabs/tabs_clean.scss';
+@use './components/cards/card_property.scss';
+@use './components/cards/card_resource.scss';
+
+

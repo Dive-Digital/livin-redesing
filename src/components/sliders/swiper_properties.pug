@@ -1,0 +1,25 @@
+section.swiper-properties.py-12
+  .container.mx-auto
+    .title-properies.text-center.pb-3
+      h2 Destacados
+        span  para ti
+    include ../tabs/tabs_bordered.pug
+  div(class="tab-content container mx-auto mt-5" id="Arriendo")
+    .swiper-container.mySwiper
+      .swiper-wrapper
+        each slide in [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10]
+          .swiper-slide.flex.items-stretch
+            include ../cards/card_property.pug
+      //- Nueva estructura para botones y paginación
+      div(class="flex items-center justify-center mt-12")
+        .swiper-button-prev.bg-white.shadow-xl.rounded-full.p-3.flex.items-center.justify-center.mr-2
+        .swiper-pagination
+        .swiper-button-next.bg-white.shadow-xl.rounded-full.p-3.flex.items-center.justify-center.ml-2
+    .grid.justify-items-center.mt-12
+      a(class="button-primary py-3.5 px-6 rounded-full") Ver todas las propiedades
+    div(class="tab-content" id="Venta")
+      h3 Venta
+    div(class="tab-content" id="Amoblados")
+      h3 Amoblados
+
+

@@ -1,0 +1,429 @@
+/* Reorganización de las fuentes Montserrat según los archivos disponibles */
+
+@font-face {
+  font-family: 'Montserrat Thin';
+  src: url('./assets/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Thin Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat ExtraLight';
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat ExtraLight Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('./assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Light Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('./assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('./assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url('./assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('./assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat ExtraBold';
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat ExtraBold Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat Black';
+  src: url('./assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Black Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+// Colores
+$white: #FFFFFF;
+$off-white: #FEFEFE;
+$light-gray: #FBFBFB;
+$gray: #DFDFDF;
+$medium-gray: #707070;
+$dark-gray: #36414A;
+$black-opacity-16: #00000029; // 16% de opacidad
+$black-opacity-43: #0000006E; // 43% de opacidad
+$lime-green: #CBDC00;
+
+// Variables de fuentes Montserrat
+
+$montserrat-black: 'Montserrat Black', sans-serif;
+$montserrat-black-italic: 'Montserrat Black Italic', sans-serif;
+
+$montserrat-bold: 'Montserrat Bold', sans-serif;
+$montserrat-bold-italic: 'Montserrat Bold Italic', sans-serif;
+
+$montserrat-extra-bold: 'Montserrat ExtraBold', sans-serif;
+$montserrat-extra-bold-italic: 'Montserrat ExtraBold Italic', sans-serif;
+
+$montserrat-extra-light: 'Montserrat ExtraLight', sans-serif;
+$montserrat-extra-light-italic: 'Montserrat ExtraLight Italic', sans-serif;
+
+$montserrat-italic: 'Montserrat Italic', sans-serif;
+
+$montserrat-light: 'Montserrat Light', sans-serif;
+$montserrat-light-italic: 'Montserrat Light Italic', sans-serif;
+
+$montserrat-medium: 'Montserrat Medium', sans-serif;
+$montserrat-medium-italic: 'Montserrat Medium Italic', sans-serif;
+
+$montserrat-regular: 'Montserrat Regular', sans-serif;
+
+$montserrat-semi-bold: 'Montserrat SemiBold', sans-serif;
+$montserrat-semi-bold-italic: 'Montserrat SemiBold Italic', sans-serif;
+
+$montserrat-thin: 'Montserrat Thin', sans-serif;
+$montserrat-thin-italic: 'Montserrat Thin Italic', sans-serif;
+
+body,
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: $montserrat-regular;
+  background-color: $light-gray;
+  color: $dark-gray;
+}
+
+h1, h2{
+  font-family: $montserrat-black;
+  color: $dark-gray
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem; // 40px
+
+  span {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem; // 32px
+
+  span {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem; // 24px
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem; // 20px
+
+  span {
+    font-size: 1.25rem;
+  }
+}
+
+h5 {
+  font-size: 1.125rem; // 18px
+
+  span {
+    font-size: 1.125rem;
+  }
+}
+
+h6 {
+  font-size: 1rem; // 16px
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+p {
+  font-size: 1rem; // 16px
+  margin-bottom: 1rem;
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+.small-text {
+  font-size: 0.875rem; // 14px para texto secundario o meta información
+
+  span {
+    font-size: 0.875rem;
+  }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.875rem; // 14px, ajustado para móviles
+  }
+
+  h1 {
+    font-size: 1.75rem; // 28px para móviles
+
+    span {
+      font-size: 1.75rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem; // 24px para móviles
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.375rem; // 22px para móviles
+
+    span {
+      font-size: 1.375rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.125rem; // 18px para móviles
+
+    span {
+      font-size: 1.125rem;
+    }
+  }
+
+  h5 {
+    font-size: 1rem; // 16px para móviles
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  h6 {
+    font-size: 0.875rem; // 14px para móviles
+
+    span {
+      font-size: 0.875rem;
+    }
+  }
+
+  p {
+    font-size: 0.875rem; // 14px
+    line-height: 1.5;
+
+    span {
+      font-size: 0.875rem;
+    }
+  }
+
+  button {
+    font-size: 0.875rem; // Ajustar el tamaño del texto del botón para móviles
+    padding: 0.5rem 1rem; // Reducir el tamaño de padding para ajustarse mejor a pantallas pequeñas
+  }
+}
+
+/* Texto secundario, notas o meta información */
+.meta-info {
+  font-size: 0.75rem; // 12px para textos menos importantes, pero siempre legibles
+  color: #666;
+
+  span {
+    font-size: 0.75rem;
+  }
+}
+
+/* Estilos específicos para header y footer */
+header, footer {
+  font-size: 0.875rem; // Tamaño ligeramente más pequeño para header y footer
+  line-height: 1.4;
+
+  span {
+    font-size: 0.875rem;
+  }
+}
+
+.swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 1.5rem;
+  bottom: var(--swiper-pagination-bottom, 0px) !important;
+  transform: translateY(0.625rem);
+  width: auto !important;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: $dark-gray;
+  transition: background-color 0.3s ease;
+  margin: 0 0.25rem;
+  opacity: .9;
+  &.swiper-pagination-bullet-active{
+    background-color: $lime-green;
+    transition: background-color 0.3s ease;
+    width: 1rem;
+    border-radius: 4px;
+    opacity: 1;
+  }
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px;
+  height: 48px;
+  position: relative; // Ajuste para alinearlo con los bullets
+  top: auto;
+  transform: translateY(36%);
+}
+
+
+.swiper-button-next:after, .swiper-button-prev:after{
+  color: $lime-green;
+  font-size: 14px;
+}
+.swiper-button-prev:after{
+  margin-right: .2rem;
+}
+.swiper-button-next:after{
+  margin-left: .2rem;
+}
+.swiper-button-disabled {
+  cursor: auto;
+  pointer-events: none;
+  &::after{
+    opacity: .5;
+    box-shadow: none;
+    color: $dark-gray;
+    transition: color 0.3s ease;
+  }
+}
+
+.button-primary{
+  background-color: $lime-green;
+  color: $dark-gray;
+  border: none;
+  cursor: pointer;
+  font-family: $montserrat-bold;
+  transition: background-color 0.3s ease;
+  &:hover{
+    background-color: $dark-gray;
+    color: $lime-green;
+  }
+}
+
+.button-secondary{
+  background-color: $dark-gray;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  font-family: $montserrat-bold;
+  transition: background-color 0.3s ease;
+  i {
+    color: $lime-green
+  }
+  &:hover{
+    opacity: .9;
+    background-color: $dark-gray;
+    color: $white;
+  }
+}

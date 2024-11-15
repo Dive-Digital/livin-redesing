@@ -1,0 +1,35 @@
+header(class="bg-white rounded-xl shadow-lg py-4 px-6 container md:mx-auto")
+  .flex.items-center.justify-between
+    .flex.items-center
+      img(src="/assets/images/Logo.svg" alt="Livin Inmobiliaria Logo" class="w-16 h-16")
+      nav(class="hidden md:flex ml-8 space-x-8")
+        a(class="text-gray-800" href="#") Arriendos
+        a(class="text-gray-800" href="#") Ventas
+        a(class="text-gray-800" href="#") Nosotros
+        a(class="text-gray-800" href="#") Blog
+    .flex.items-center.space-x-4
+      a(class="text-gray-800 hidden md:inline" href="#") Soy cliente
+      a(class="flex items-center" href="#")
+        span(class="text-red-500 mr-1") ❤
+        span(class="text-gray-800") Mi lista (1)
+      a(class="bg-lime-500 text-white rounded-full px-4 py-2") Pagar en línea
+      button(class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-white")
+        span(class="sr-only") Abrir menú
+        svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6")
+          path(stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7")
+
+#mobile-menu(class="hidden md:hidden")
+  nav(class="flex flex-col items-start space-y-4 p-4")
+    a(class="text-gray-800" href="#") Arriendos
+    a(class="text-gray-800" href="#") Ventas
+    a(class="text-gray-800" href="#") Nosotros
+    a(class="text-gray-800" href="#") Blog
+    a(class="text-gray-800" href="#") Soy cliente
+    a(class="flex items-center" href="#")
+      span(class="text-red-500 mr-1") ❤
+      span(class="text-gray-800") Mi lista (1)
+    a(class="bg-lime-500 text-white rounded-full px-4 py-2") Pagar en línea
+    button(class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-white")
+      span(class="sr-only") Buscar
+      svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6")
+        path(stroke-linecap="round" stroke-linejoin="round" d="M10 18a8 8 0 100-16 8 8 0 000 16zm14-2l-6-6")

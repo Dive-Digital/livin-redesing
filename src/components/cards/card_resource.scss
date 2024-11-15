@@ -1,0 +1,58 @@
+@use '../../styles/_variables.scss' as *;
+.card .resource {
+  padding: 1rem;
+  background-color: #ffffff;
+  transition: box-shadow 0.5s ease;
+  i{
+    color: $lime-green;
+  }
+  p,h3{
+    margin: 0;
+
+  }
+  .card-header {
+    position: relative;
+
+    .code {
+      background: rgba(255, 255, 255, 0.3); // Fondo semi-transparente para dar efecto de vidrio.
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .favorite-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      i {
+        color: #ff0000;
+        font-size: 1.2rem;
+      }
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .card-body {
+    .title{
+    h3{
+      font-family: $montserrat-bold;
+    }
+  }
+  }
+  .card-footer {
+    position: relative;
+    height: 40px; // Ajusta según el alto de .additional-info y .view-property
+    display: flex;
+    align-items: center;
+  }
+}

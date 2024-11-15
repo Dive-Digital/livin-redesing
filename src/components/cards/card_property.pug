@@ -1,0 +1,39 @@
+div(class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl")
+  .card-header
+    .code.rounded-full.py-1.px-2.text-sm.text-dark-gray.drop-shadow
+      span COD: LI890
+    button.favorite-button
+      i.fa.fa-heart
+    img.card-img(src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image" class="w-full h-auto rounded-t-xl")
+  div(class="card-body flex flex-col space-y-4")
+    .location
+      h4 Rionegro - Kilometro 2 vereda pantanillo
+    .tags
+      span Arriendo
+      span Casa
+    div(class="price-area flex justify-between")
+      .price.flex.items-center.space-x-1
+        i.fa.fa-tag
+        p
+          span $
+          |  6.000.000
+      .area.flex.items-center.space-x-1
+        i.fa.fa-ruler-horizontal
+        p 93.00
+          span m²
+  .card-footer
+    .additional-info.flex.justify-between
+      .beds.flex.items-center.space-x-2
+        i.fa.fa-bed
+        p 4
+          span  Alcobas
+      .baths.flex.items-center.space-x-2
+        i.fa.fa-bath
+        p 3
+          span  Baños
+      .parking.flex.items-center.space-x-2
+        i.fa.fa-car
+        p 2
+          span  Parq.
+    .view-property
+      include ../buttons/button_primary.pug

@@ -1,0 +1,16 @@
+section(class="swiper-blog py-12")
+  .container.mx-auto
+    .title-blog.text-center.pb-3
+      h2 Recursos y guías para
+        span  vivir mejor
+    include ../tabs/tabs_clean.pug
+  div(class="tab-content2 container mx-auto mt-5" id="Vertice1")
+    .swiper-container.mySwiper2
+      .swiper-wrapper
+        each slide in [1, 2, 3]
+          .swiper-slide.flex.items-stretch
+            include ../cards/card_resource.pug
+    div(class="tab-content2" id="Vertice2")
+      h3 Vertice 2
+    div(class="tab-content2" id="Vertice3")
+      h3 Vertice 3

@@ -1,0 +1,30 @@
+# EditorConfig ayuda a mantener estilos de codificación consistentes entre diferentes editores e IDEs
+root = true
+
+# Reglas generales para todos los archivos
+[*]
+indent_style = space          # Usa espacios para la indentación
+indent_size = 2               # Tamaño de indentación en 2 espacios
+end_of_line = lf              # Fin de línea tipo LF (Unix)
+charset = utf-8               # Codificación UTF-8
+trim_trailing_whitespace = true  # Elimina los espacios al final de las líneas
+insert_final_newline = true   # Inserta una nueva línea al final del archivo
+
+# Reglas para archivos de configuración
+[*.{json,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Reglas para archivos HTML, CSS, SCSS y JavaScript
+[*.{html,css,scss,js}]
+indent_style = space
+indent_size = 2
+
+# Reglas específicas para archivos de Pug
+[*.pug]
+indent_style = space
+indent_size = 2
+
+# Reglas para archivos Markdown
+[*.md]
+trim_trailing_whitespace = false  # Mantén espacios al final de las líneas en Markdown
