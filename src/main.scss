@@ -10,6 +10,7 @@
 @use './styles/_variables.scss' as *;
 
 // estilos de las secciones
+@use './components/header.scss';
 @use './components/banners/hero_banner.scss';
 @use './components/sliders/swiper_properties.scss';
 @use './components/sliders/swiper_resources.scss';
@@ -18,5 +19,5 @@
 @use './components/tabs/tabs_clean.scss';
 @use './components/cards/card_property.scss';
 @use './components/cards/card_resource.scss';
-
+@use './components/footer.scss';
 

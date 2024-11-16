@@ -3,6 +3,24 @@ import './main.scss';
 console.log('Hello World!');
 document.addEventListener("DOMContentLoaded", () => {
 
+  // header.js
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menuButton');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    const toggleMenu = () => {
+      const isOpen = mobileMenu.classList.contains('translate-x-0');
+      mobileMenu.classList.toggle('translate-x-0');
+      mobileMenu.classList.toggle('translate-x-full');
+
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+    };
+
+    menuButton.addEventListener('click', toggleMenu);
+    closeMenu.addEventListener('click', toggleMenu);
+  });
   function openOption(evt, optionName) {
     // Ocultar todas las pestañas de contenido
     document.querySelectorAll('.tab-content').forEach(tab => {

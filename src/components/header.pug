@@ -1,35 +1,28 @@
-header(class="bg-white rounded-xl shadow-lg py-4 px-6 container md:mx-auto")
-  .flex.items-center.justify-between
-    .flex.items-center
-      img(src="/assets/images/Logo.svg" alt="Livin Inmobiliaria Logo" class="w-16 h-16")
-      nav(class="hidden md:flex ml-8 space-x-8")
-        a(class="text-gray-800" href="#") Arriendos
-        a(class="text-gray-800" href="#") Ventas
-        a(class="text-gray-800" href="#") Nosotros
-        a(class="text-gray-800" href="#") Blog
-    .flex.items-center.space-x-4
-      a(class="text-gray-800 hidden md:inline" href="#") Soy cliente
-      a(class="flex items-center" href="#")
-        span(class="text-red-500 mr-1") ❤
-        span(class="text-gray-800") Mi lista (1)
-      a(class="bg-lime-500 text-white rounded-full px-4 py-2") Pagar en línea
-      button(class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-white")
-        span(class="sr-only") Abrir menú
-        svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6")
-          path(stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7")
+header(class="fixed top-0 z-50 mx-auto")
+  div(class="container flex items-center justify-between top-0 left-0 px-6 bg-white shadow-md rounded-2xl my-10 space-x-8")
 
-#mobile-menu(class="hidden md:hidden")
-  nav(class="flex flex-col items-start space-y-4 p-4")
-    a(class="text-gray-800" href="#") Arriendos
-    a(class="text-gray-800" href="#") Ventas
-    a(class="text-gray-800" href="#") Nosotros
-    a(class="text-gray-800" href="#") Blog
-    a(class="text-gray-800" href="#") Soy cliente
-    a(class="flex items-center" href="#")
-      span(class="text-red-500 mr-1") ❤
-      span(class="text-gray-800") Mi lista (1)
-    a(class="bg-lime-500 text-white rounded-full px-4 py-2") Pagar en línea
-    button(class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 text-white")
-      span(class="sr-only") Buscar
-      svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6")
-        path(stroke-linecap="round" stroke-linejoin="round" d="M10 18a8 8 0 100-16 8 8 0 000 16zm14-2l-6-6")
+    // Desktop Menu
+    nav(class="hidden lg:flex items-center space-x-8")
+      a(href="/arriendos" class="text-gray-700 hover:text-gray-900") Arriendos
+      a(href="/ventas" class="text-gray-700 hover:text-gray-900") Ventas
+      a(href="/nosotros" class="text-gray-700 hover:text-gray-900") Nosotros
+      a(href="/blog" class="text-gray-700 hover:text-gray-900") Blog
+    // Logo
+    a(href="/" class="flex items-center justify-center bg-lime-400 rounded-full w-16 h-16")
+      img(src="../assets/images/Logo.svg" alt="Livin Logo" class="w-10 h-10")
+
+    // Desktop Right Menu
+    div(class="hidden lg:flex items-center space-x-6")
+      a(href="/soy-cliente" class="text-gray-700 hover:text-gray-900") Soy cliente
+      .relative
+        a(href="/mi-lista" class="flex items-center text-gray-700 hover:text-gray-900")
+          i.fa.fa-heart.text-red-500.text-lg
+          span.ml-1 (1)
+      a(href="/pagar" class="bg-lime-400 text-gray-900 px-6 py-2 rounded-full hover:bg-lime-500") Pagar en línea
+
+    // Mobile Menu Button
+    button(class="lg:hidden flex items-center justify-center")#menuButton
+      span.sr-only Toggle Menu
+      svg.w-6.h-6(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
+        path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16")
+

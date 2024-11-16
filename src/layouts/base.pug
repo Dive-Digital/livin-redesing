@@ -8,11 +8,11 @@ html
     link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
     link(rel="stylesheet" href="/main.css")
   body
-    //include ../components/header.pug
+    include ../components/header.pug
     block content
       //home
       include ../pages/home.pug
 
-      //include ../components/footer.pug
+    include ../components/footer.pug
     script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="/main.js")
