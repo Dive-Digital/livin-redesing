@@ -11,7 +11,7 @@
     padding:  0.75rem 2rem;
     margin: 0 .125rem;
     span{
-      font-size: 15px;
+      font-size: 16px;
     }
     &:hover + span{
       color: $lime-green;
@@ -53,4 +53,15 @@
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+@media (max-width: 768px) {
+  .tabs-bordered{
+    button{
+      padding: 0.75rem 1.5rem !important;
+      span{
+        font-size: 14px;
+      }
+    }
+  }
 }

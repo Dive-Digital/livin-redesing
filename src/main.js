@@ -229,4 +229,49 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+
+  // Inicializa el Swiper
+  const swiper = new Swiper('.testimonials-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  });
+
+
+
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".section-properties");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      } else {
+        entry.target.classList.remove("in-view");
+      }
+    });
+  }, {
+    threshold: 0.99, // Se activa cuando al menos el 30% de la sección esté visible
+  });
+
+  observer.observe(section);
+});
+

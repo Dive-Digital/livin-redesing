@@ -1,0 +1,21 @@
+@use '../../styles/_variables.scss' as *;
+
+.section-properties {
+  transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+  transform: scale(0.80);
+  border-radius: 42px; // Asegurar que los bordes redondeados sean visibles
+
+  &.in-view {
+    transform: scale(1);
+  }
+
+  // Desactivar animación en dispositivos móviles
+  @media (max-width: 640px) {
+    transform: none;
+    border-radius: 42px;
+
+    &.in-view {
+      transform: none;
+    }
+  }
+}

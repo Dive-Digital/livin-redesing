@@ -4,28 +4,655 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIVIN Inmobiliaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/main.css">
   <link href="main.css" rel="stylesheet"></head>
   <body>
-<header class="bg-white rounded-2xl shadow-md p-4 flex justify-between items-center">
-  <nav class="flex items-center">
-    <!-- Logo--><a class="flex items-center" href="#">
-      <div class="bg-lime-400 rounded-full flex items-center justify-center w-16 h-16"><img class="w-10 h-auto" src="/path/to/logo.png" alt="LIVIN Inmobiliaria"></div></a>
-    <!-- Menú de navegación-->
-    <ul class="flex ml-8 space-x-6">
-      <li><a class="text-gray-700 font-semibold hover:text-lime-400" href="#">Arriendos</a></li>
-      <li><a class="text-gray-700 font-semibold hover:text-lime-400" href="#">Ventas</a></li>
-      <li><a class="text-gray-700 font-semibold hover:text-lime-400" href="#">Nosotros</a></li>
-      <li><a class="text-gray-700 font-semibold hover:text-lime-400" href="#">Blog</a></li>
-    </ul>
-  </nav>
-  <!-- Opciones del lado derecho-->
-  <div class="flex items-center space-x-4"><a class="text-gray-700 font-semibold hover:text-lime-400" href="#">Soy cliente</a><a class="flex items-center text-gray-700 font-semibold hover:text-lime-400" href="#"><i class="text-red-500 mr-1">♥</i>Mi lista (1)</a><a class="bg-lime-400 text-white font-semibold rounded-full px-4 py-2 hover:bg-lime-500" href="#">Pagar en línea</a></div>
+<header class="fixed top-0 z-50 mx-auto">
+  <div class="container flex items-center justify-between top-0 left-0 px-6 bg-white shadow-md rounded-2xl my-10 space-x-8">
+    <!-- Desktop Menu-->
+    <nav class="hidden lg:flex items-center space-x-8"><a class="text-gray-700 hover:text-gray-900" href="/arriendos">Arriendos</a><a class="text-gray-700 hover:text-gray-900" href="/ventas">Ventas</a><a class="text-gray-700 hover:text-gray-900" href="/nosotros">Nosotros</a><a class="text-gray-700 hover:text-gray-900" href="/blog">Blog</a></nav>
+    <!-- Logo--><a class="flex items-center justify-center bg-lime-400 rounded-full w-16 h-16" href="/"><img class="w-10 h-10" src="../assets/images/Logo.svg" alt="Livin Logo"></a>
+    <!-- Desktop Right Menu-->
+    <div class="hidden lg:flex items-center space-x-6"><a class="text-gray-700 hover:text-gray-900" href="/soy-cliente">Soy cliente</a>
+      <div class="relative"><a class="flex items-center text-gray-700 hover:text-gray-900" href="/mi-lista"><i class="fa fa-heart text-red-500 text-lg"></i><span class="ml-1">(1)</span></a></div><a class="bg-lime-400 text-gray-900 px-6 py-2 rounded-full hover:bg-lime-500" href="/pagar">Pagar en línea</a>
+    </div>
+    <!-- Mobile Menu Button-->
+    <button class="lg:hidden flex items-center justify-center" id="menuButton"><span class="sr-only">Toggle Menu</span>
+      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
 </header>
-<div class="container mx-auto p-4">
-  <h1 class="text-3xl font-bold text-center">LIVIN Inmobiliaria footer</h1>
-  <p class="text-gray-700">Bienvenido al proyecto</p>
+    <!--home-->
+<section class="hero-banner bg-darkGray">
+  <video class="hero-background hero-banner__video" autoplay muted loop>
+    <source src="../assets/video/1476339_People_Lifestyle_1920x1080.mp4" type="video/mp4">
+  </video>
+  <div class="container mx-auto">
+    <div class="grid justify-items-center content-center">
+      <div class="hero-content">
+        <h1>Tan simple como vivir.</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="swiper-properties py-12">
+  <div class="container mx-auto">
+    <div class="title-properies text-center pb-3">
+      <h2>Destacados<span> para ti</span></h2>
+    </div>
+<div class="grid justify-items-center">
+  <div class="mx-auto">
+    <div class="tabs-bordered flex border-solid border border-limeGreen rounded-full p-2">
+      <button class="tab-option rounded-full" id="defaultOpen" onclick="openOption(event, 'Arriendo')"><span>Arriendo</span></button>
+      <button class="tab-option rounded-full " onclick="openOption(event, 'Venta')"><span>Venta</span></button>
+      <button class="tab-option rounded-full " onclick="openOption(event, 'Amoblados')"><span>Amoblados</span></button>
+    </div>
+  </div>
 </div>
+  </div>
+  <div class="tab-content container mx-auto mt-5" id="Arriendo">
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card property p-2 h-full flex flex-col space-y-4 shadow-2xl">
+  <div class="card-header">
+    <div class="code rounded-full py-1 px-2 text-sm text-dark-gray drop-shadow"><span>COD: LI890</span></div>
+    <button class="favorite-button"><i class="fa fa-heart"></i></button><img class="card-img w-full h-auto rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Property Image">
+  </div>
+  <div class="card-body flex flex-col space-y-4">
+    <div class="location">
+      <h4>Rionegro - Kilometro 2 vereda pantanillo</h4>
+    </div>
+    <div class="tags"><span>Arriendo</span><span>Casa</span></div>
+    <div class="price-area flex justify-between">
+      <div class="price flex items-center space-x-1"><i class="fa fa-tag"></i>
+        <p><span>$</span> 6.000.000</p>
+      </div>
+      <div class="area flex items-center space-x-1"><i class="fa fa-ruler-horizontal"></i>
+        <p>93.00<span>m²</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="additional-info flex justify-between">
+      <div class="beds flex items-center space-x-2"><i class="fa fa-bed"></i>
+        <p>4<span> Alcobas</span></p>
+      </div>
+      <div class="baths flex items-center space-x-2"><i class="fa fa-bath"></i>
+        <p>3<span> Baños</span></p>
+      </div>
+      <div class="parking flex items-center space-x-2"><i class="fa fa-car"></i>
+        <p>2<span> Parq.</span></p>
+      </div>
+    </div>
+    <div class="view-property"><a class="button-primary py-3.5 px-6 rounded-full">Ver propiedad</a>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center mt-12">
+        <div class="swiper-button-prev bg-white shadow-xl rounded-full p-3 flex items-center justify-center mr-2"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next bg-white shadow-xl rounded-full p-3 flex items-center justify-center ml-2"></div>
+      </div>
+    </div>
+    <div class="grid justify-items-center mt-12"><a class="button-primary py-3.5 px-6 rounded-full">Ver todas las propiedades</a></div>
+    <div class="tab-content" id="Venta">
+      <h3>Venta</h3>
+    </div>
+    <div class="tab-content" id="Amoblados">
+      <h3>Amoblados</h3>
+    </div>
+  </div>
+</section>
+<section class="swiper-resources py-12 bg-limeGreen rounded-[42px]">
+  <div class="container mx-auto">
+    <div class="title-resources text-center pb-3">
+      <h2>Recursos y guías para<span> vivir mejor</span></h2>
+    </div>
+<div class="grid justify-items-center">
+  <div class="mx-auto">
+    <div class="tabs-borderless bg-white flex rounded-full p-2">
+      <button class="tab-option1 rounded-full" id="defaultOpen1" onclick="openOption1(event, 'Propietario')"><span>Propietario</span></button>
+      <button class="tab-option1 rounded-full " onclick="openOption1(event, 'Inquilino')"><span>Inquilino</span></button>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="tab-content1 container mx-auto mt-5" id="Propietario">
+    <div class="swiper-container mySwiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex items-stretch">
+<div class="card resource p-4 bg-white flex flex-col justify-between rounded-2xl shadow-xl">
+  <div class="card-header"><img class="card-img w-full rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Resource Image">
+    <div class="icon bg-lime-green flex items-center justify-center"><i class="fa fa-lightbulb-o text-white text-2xl"></i></div>
+  </div>
+  <div class="card-body flex flex-col space-y-2">
+    <div class="title">
+      <h3>Pre-qualified vs. pre-approved: What’s the difference?</h3>
+    </div><a class="text-lime-green text-base underline font-bold" href="#">Ver contenido</a>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card resource p-4 bg-white flex flex-col justify-between rounded-2xl shadow-xl">
+  <div class="card-header"><img class="card-img w-full rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Resource Image">
+    <div class="icon bg-lime-green flex items-center justify-center"><i class="fa fa-lightbulb-o text-white text-2xl"></i></div>
+  </div>
+  <div class="card-body flex flex-col space-y-2">
+    <div class="title">
+      <h3>Pre-qualified vs. pre-approved: What’s the difference?</h3>
+    </div><a class="text-lime-green text-base underline font-bold" href="#">Ver contenido</a>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card resource p-4 bg-white flex flex-col justify-between rounded-2xl shadow-xl">
+  <div class="card-header"><img class="card-img w-full rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Resource Image">
+    <div class="icon bg-lime-green flex items-center justify-center"><i class="fa fa-lightbulb-o text-white text-2xl"></i></div>
+  </div>
+  <div class="card-body flex flex-col space-y-2">
+    <div class="title">
+      <h3>Pre-qualified vs. pre-approved: What’s the difference?</h3>
+    </div><a class="text-lime-green text-base underline font-bold" href="#">Ver contenido</a>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid justify-items-center mt-12 flex flex-col space-y-2"><a class="button-secondary py-3.5 px-6 rounded-full" href="#"><i class="fa fa-lightbulb-o mr-2"></i>Ir al centro de recursos</a><a class="button-secondary py-3.5 px-6 rounded-full" href="#"><i class="fa fa-user mr-2"></i>Ingresar a Soy cliente</a></div>
+    <div class="tab-content1" id="Inquilino">
+      <h3>Inquilino</h3>
+    </div>
+  </div>
+</section>
+<section class="swiper-blog py-12">
+  <div class="container mx-auto">
+    <div class="title-blog text-center pb-3">
+      <h2>Recursos y guías para<span> vivir mejor</span></h2>
+    </div>
+<div class="grid justify-items-center">
+  <div class="mx-auto">
+    <div class="tabs-clean flex rounded-full p-2">
+      <button class="tab-option2 rounded-full" id="defaultOpen2" onclick="openOption2(event, 'Vertice1')"><span>Vertice 1</span></button>
+      <button class="tab-option2 rounded-full " onclick="openOption2(event, 'Vertice2')"><span>Vertice 2</span></button>
+      <button class="tab-option2 rounded-full " onclick="openOption2(event, 'Vertice3')"><span>Vertice 3</span></button>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="tab-content2 container mx-auto mt-5" id="Vertice1">
+    <div class="swiper-container mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex items-stretch">
+<div class="card resource p-4 bg-white flex flex-col justify-between rounded-2xl shadow-xl">
+  <div class="card-header"><img class="card-img w-full rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Resource Image">
+    <div class="icon bg-lime-green flex items-center justify-center"><i class="fa fa-lightbulb-o text-white text-2xl"></i></div>
+  </div>
+  <div class="card-body flex flex-col space-y-2">
+    <div class="title">
+      <h3>Pre-qualified vs. pre-approved: What’s the difference?</h3>
+    </div><a class="text-lime-green text-base underline font-bold" href="#">Ver contenido</a>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card resource p-4 bg-white flex flex-col justify-between rounded-2xl shadow-xl">
+  <div class="card-header"><img class="card-img w-full rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Resource Image">
+    <div class="icon bg-lime-green flex items-center justify-center"><i class="fa fa-lightbulb-o text-white text-2xl"></i></div>
+  </div>
+  <div class="card-body flex flex-col space-y-2">
+    <div class="title">
+      <h3>Pre-qualified vs. pre-approved: What’s the difference?</h3>
+    </div><a class="text-lime-green text-base underline font-bold" href="#">Ver contenido</a>
+  </div>
+</div>
+        </div>
+        <div class="swiper-slide flex items-stretch">
+<div class="card resource p-4 bg-white flex flex-col justify-between rounded-2xl shadow-xl">
+  <div class="card-header"><img class="card-img w-full rounded-t-xl" src="../assets/images/brian-babb-XbwHrt87mQ0-unsplash.png" alt="Resource Image">
+    <div class="icon bg-lime-green flex items-center justify-center"><i class="fa fa-lightbulb-o text-white text-2xl"></i></div>
+  </div>
+  <div class="card-body flex flex-col space-y-2">
+    <div class="title">
+      <h3>Pre-qualified vs. pre-approved: What’s the difference?</h3>
+    </div><a class="text-lime-green text-base underline font-bold" href="#">Ver contenido</a>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content2" id="Vertice2">
+      <h3>Vertice 2</h3>
+    </div>
+    <div class="tab-content2" id="Vertice3">
+      <h3>Vertice 3</h3>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="line-gray">
+    <div class="footer-container">
+      <div class="arriba-footer">
+        <div class="footer-logo"><img class="logo-foo" src="./Logo.svg" alt="Logo Livin Inmobiliaria">
+          <div class="social-icons"><a class="logo-foo-social" href="#"><img src="./Icon akar-facebook-fill.svg" alt="Facebook"></a><a class="logo-foo-social" href="#"><img src="./Icon akar-instagram-fill.svg" alt="Instagram"></a><a class="logo-foo-social" href="#"><img src="./Icon akar-youtube-fill.svg" alt="YouTube"></a></div>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>Categorías</h3>
+            <ul>
+              <li>Casas</li>
+              <li>Fincas</li>
+              <li>Oficinas</li>
+              <li>Lotes</li>
+              <li>Apartamentos</li>
+              <li>Bodegas</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Acerca de Livin</h3>
+            <ul>
+              <li>Nosotros</li>
+              <li>Blog</li>
+              <li>Centro de recursos</li>
+              <li>Tratamiento de datos</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Centro del cliente</h3>
+            <ul>
+              <li>Soy cliente</li>
+              <li>Pagar facturas</li>
+              <li>Mi lista</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <p>Calle 10B # 36 - 41 El Poblado - Medellín, Colombia</p>
+            <p>Teléfono:<a href="tel:6044444989">6044444989</a></p>
+            <p>Celular:<a href="tel:3184444845">3184444845</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sin-linea">
+    <div class="footer-container">
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Ventas</h3>
+          <ul>
+            <li>Casas en el Poblado</li>
+            <li>Apartamentos en el poblado</li>
+            <li>Oficinas en el poblado</li>
+            <li>Bodegas en el poblado</li>
+            <li>Casas en Laureles</li>
+            <li>Apartamentos en Laureles</li>
+            <li><a class="flex-a" href="#">Ver más<img src="./Icon feather-chevron-down.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Arriendos</h3>
+          <ul>
+            <li>Casas en el Poblado</li>
+            <li>Apartamentos en el poblado</li>
+            <li>Oficinas en el poblado</li>
+            <li>Bodegas en el poblado</li>
+            <li>Casas en Laureles</li>
+            <li>Apartamentos en Laureles</li>
+            <li><a class="flex-a" href="#">Ver más<img src="./Icon feather-chevron-down.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <p class="ultimo-seo">Texto para SEO, Lorem ipsum dolor sit amet, consectetur sadipiscing elit, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+        </div>
+        <div class="footer-column"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Livin Inmobiliaria Todos los derechos reservados copyright 2025</p>
+  </div>
+</footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/main.js"></script>
   <script defer src="main.js"></script></body>
 </html>

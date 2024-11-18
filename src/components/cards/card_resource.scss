@@ -1,4 +1,5 @@
 @use '../../styles/_variables.scss' as *;
+
 .card .resource {
   padding: 1rem;
   background-color: #ffffff;
@@ -13,14 +14,6 @@
   .card-header {
     position: relative;
 
-    .code {
-      background: rgba(255, 255, 255, 0.3); // Fondo semi-transparente para dar efecto de vidrio.
-      backdrop-filter: blur(10px);
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
     .favorite-button {
       position: absolute;
       top: 10px;
@@ -30,7 +23,6 @@
       cursor: pointer;
 
       i {
-        color: #ff0000;
         font-size: 1.2rem;
       }
     }

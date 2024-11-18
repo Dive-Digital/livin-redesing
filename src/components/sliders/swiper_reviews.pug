@@ -1,0 +1,41 @@
+section(class="testimonial-section px-4 py-16 bg-lightGray overflow-hidden rounded-[42px]")
+  .container.mx-auto
+    // Título de la sección
+    div(class="text-content text-center mb-10")
+      h2(class="text-4xl font-bold text-darkGray mb-4") Esto dicen
+        span.text-lime-400 de nosotros
+
+    // Slider container
+    .swiper-container.mySwiper
+      .swiper-wrapper
+        //- Slide 1
+        div(class="swiper-slide flex flex-col items-center md:flex-row md:space-x-8")
+          div(class="testimonial-card relative bg-darkGray p-8 rounded-2xl w-full md:w-1/3")
+            i.fa.fa-comments.text-lime-400.absolute.top-5.right-5.text-2xl
+            p.text-white.font-light.text-sm.mb-6
+              | "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua".
+            h4.text-lime-400.text-sm.font-bold.text-right.mt-auto NATALIA PROPIETARIA
+          div(class="testimonial-image relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden")
+            img(src="../assets/person1.jpg" alt="Testimonial Image" class="w-full h-full object-cover")
+            button(class="play-button absolute inset-0 flex items-center justify-center")
+              i.fa.fa-play.text-lime-400.text-5xl
+
+        //- Slide 2
+        div(class="swiper-slide flex flex-col items-center md:flex-row md:space-x-8")
+          div(class="testimonial-card relative bg-darkGray p-8 rounded-2xl w-full md:w-1/3")
+            i.fa.fa-comments.text-lime-400.absolute.top-5.right-5.text-2xl
+            p.text-white.font-light.text-sm.mb-6
+              | "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua".
+            h4.text-lime-400.text-sm.font-bold.text-right.mt-auto JULIANA ARRENDATARIA
+          div(class="testimonial-image relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden")
+            img(src="../assets/person2.jpg" alt="Testimonial Image" class="w-full h-full object-cover")
+            button(class="play-button absolute inset-0 flex items-center justify-center")
+              i.fa.fa-play.text-lime-400.text-5xl
+
+    // Paginación y navegación del slider
+    .swiper-pagination.mt-8
+    .swiper-navigation.flex.justify-between.items-center.mt-4
+      button.swiper-button-prev.rounded-full.bg-white.shadow-lg.p-3
+        i.fa.fa-arrow-left.text-lime-400
+      button.swiper-button-next.rounded-full.bg-white.shadow-lg.p-3
+        i.fa.fa-arrow-right.text-lime-400

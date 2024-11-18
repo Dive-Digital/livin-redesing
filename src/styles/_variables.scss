@@ -349,6 +349,7 @@ header, footer {
   bottom: var(--swiper-pagination-bottom, 0px) !important;
   transform: translateY(0.625rem);
   width: auto !important;
+
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -363,6 +364,7 @@ header, footer {
     width: 1rem;
     border-radius: 4px;
     opacity: 1;
+    transition: all 0.5s ease;
   }
 }
 
@@ -399,6 +401,7 @@ header, footer {
 }
 
 .button-primary{
+  font-size: 16px;
   background-color: $lime-green;
   color: $dark-gray;
   border: none;
@@ -412,6 +415,7 @@ header, footer {
 }
 
 .button-secondary{
+  font-size: 16px;
   background-color: $dark-gray;
   color: $white;
   border: none;
@@ -425,5 +429,13 @@ header, footer {
     opacity: .9;
     background-color: $dark-gray;
     color: $white;
+  }
+}
+@media (max-width: 768px) {
+  .button-secondary{
+    font-size: 14px;
+  }
+  .button-secondary i{
+    font-size: 14px;
   }
 }

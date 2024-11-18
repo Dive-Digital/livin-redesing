@@ -23,6 +23,8 @@
     color: #fff;
     text-align: center;
     padding: 20px;
+    top: 50%;
+    transform: translateY(100%);
     h1{
       color: $off-white;
     }
